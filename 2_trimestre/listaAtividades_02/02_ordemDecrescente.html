@@ -1,14 +1,18 @@
+<meta charset="UTF-8">
 <script>
-    /*
-    //PROBLEMA
-    Faça um script que leia três números e mostre-os em ordem decrescente.
-    */
 
-    //ENTRADA
+var numero1 = parseInt(prompt("Digite o primeiro número:"));
+var numero2 = parseInt(prompt("Digite o segundo número:"));
+var numero3 = parseInt(prompt("Digite o terceiro número:"));
 
-    
-    //PROCESSAMENTO
-    
-    //SAÍDA
-    
+var numerosOrdenados = [numero1, numero2, numero3];
+numerosOrdenados.sort(function(a, b) {
+  return b - a;
+});
+
+var mensagem = "Números em ordem decrescente:\n";
+mensagem += numerosOrdenados[0] + ", " + numerosOrdenados[1] + ", " + numerosOrdenados[2];
+
+alert(mensagem);
+
 </script>

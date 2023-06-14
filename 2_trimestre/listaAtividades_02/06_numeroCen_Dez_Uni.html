@@ -1,22 +1,24 @@
 <script>
-    /*
-    //PROBLEMA
-    Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
-    Observando os termos no plural a colocação do "e", da vírgula entre outros.
     
-    Exemplo:
-    326 = 3 centenas, 2 dezenas e 6 unidades
-    12 = 1 dezena e 2 unidades
-    Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
-    */
+var numero = parseInt(prompt("Digite um número inteiro menor que 1000:"));
 
-    //ENTRADA
+if (numero >= 1 && numero < 1000) {
 
+  var centenas = Math.floor(numero / 100);
+  var dezenas = Math.floor((numero % 100) / 10);
+  var unidades = numero % 10;
 
-    //PROCESSAMENTO
+  var mensagem = "Quantidade de centenas: " + centenas;
+  mensagem += (centenas === 1) ? " centena, " : " centenas, ";
+  mensagem += "quantidade de dezenas: " + dezenas;
+  mensagem += (dezenas === 1) ? " dezena, " : " dezenas, ";
+  mensagem += "quantidade de unidades: " + unidades;
+  mensagem += (unidades === 1) ? " unidade." : " unidades.";
 
-    
-    //SAÍDA
+  alert(mensagem);
+} else {
 
+  alert("O número digitado não está dentro do intervalo válido.");
+}
 
 </script>
