@@ -1,4 +1,19 @@
 <meta charset="UTF-8" />
 <script>
+    let anos =Number(prompt('informe a idade de seu cão').trim().replace(",", "."));
+    const porte = prompt('qual o porte de seu cão? (responda com p para pequeno, m para médio e g para grande)').trim().toLowerCase();
+    if (porte == "p") {
+        anos = anos * 5;
+    }
+    else if (porte == "m") {
+        anos = anos *6;
+    }
+    else if (porte == "g") {
+        anos = anos * 7;
+    }
+    else {
+        alert( 'valor inválido')
+    }
+    alert(`seu cachorro tem ${anos} anos de idade`)
     
 </script>
